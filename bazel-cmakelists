@@ -30,7 +30,7 @@ flags.DEFINE_string('project',
                     subprocess.check_output("basename $(bazel info workspace)", shell=True).strip(),
                     ('project name'))
 
-flags.DEFINE_string('target', '//src/...',
+flags.DEFINE_string('target', '//source/...',
                     ('bazel target'))
 
 flags.DEFINE_boolean('open', False, ('Open CLion after generation, only supports Mac'))
