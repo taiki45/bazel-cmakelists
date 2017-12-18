@@ -21,4 +21,4 @@ bazel-cmakelists --target //test/...
 ## Requirements
 - Python 2.7
 - Bazel 0.4.5
-- gflags (`apt-get install python-gflags`)
+- abseil-py (`pip install absl-py`)
