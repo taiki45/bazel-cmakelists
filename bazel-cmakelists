@@ -13,7 +13,7 @@
 #
 # DON'T USE CMAKE TO BUILD THE PROJECT. It is not tested and likely to fail.
 
-import gflags as flags
+from absl import flags
 from os import path
 import os
 import re
@@ -200,7 +200,7 @@ def GenerateCMakeList():
 if __name__ == "__main__":
     try:
         argv = FLAGS(sys.argv)  # parse flags
-    except flags.FlagsError as e:
+    except flags.Error as e:
         sys.exit('%s\nUsage: %s ARGS\n%s' % (e, sys.argv[0], FLAGS))
 
     GenerateCMakeList()
